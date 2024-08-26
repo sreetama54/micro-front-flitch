@@ -8,3 +8,7 @@ body {
   max-width: 800px;
   margin-top: 20px;
 }
+
+h2 {
+  text-align: center;
+}

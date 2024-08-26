@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import "./index.css";
+import "./styles.css";
+import Home from "./Home";
 
 const App = () => (
   <div className="container">
-    <div>Name: admin</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
+    <div><Home/></div>
   </div>
 );
 const rootElement = document.getElementById("app")
