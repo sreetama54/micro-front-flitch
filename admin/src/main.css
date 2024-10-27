@@ -1,0 +1,15 @@
+#sample{
+    box-sizing: border-box;
+    height:300px;
+    width:300px;
+    background-color: orange;
+    border: 25px solid rgb(255, 0, 0);
+    }
+
+    #sample2{
+        height:300px;
+        width:300px;
+        border: 25px  solid #0000ff;
+        }
+    
+   
