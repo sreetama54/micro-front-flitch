@@ -2,31 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./styles.css";
-import Home from "./Home";
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+const App = () => {
 
-async function getData() {
-  const url = "https://s3.eu-west-1.amazonaws.com/hackajob-assets1.p.hackajob/challenges/football_session/football.json";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const json = await response.json();
-    console.log(json);
-  } catch (error) {
-    console.error(error.message);
+  const apoloprop={
+    uri:'https://flyby-router-demo.herokuapp.com/',
+    cache:new InMemoryCache(),
   }
-}
- 
-const App = () => (
-  <div className="container">
-    <div><Home/></div>
-  </div>
-);
+  const myclient=new ApolloClient(apoloprop)
+console.log("hi")
+  myclient.query({query:gql`
+    query GetLocations {
+      locations {
+        id
+        name
+        description
+        photo
+      }
+    }
+  `,}).then((result) => console.log("result",result));
+  return(<div className="container">
+    <div><Tsform/>this is</div>
+  </div>)
+};
 const rootElement = document.getElementById("app")
 if (!rootElement) throw new Error("Failed to find the root element")
 
 const root = ReactDOM.createRoot(rootElement)
 
-root.render(<App />)
+root.render(<ApolloProvider><App/></ApolloProvider>)
