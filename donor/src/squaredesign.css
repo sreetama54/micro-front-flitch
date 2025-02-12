@@ -1,0 +1,23 @@
+.tictac
+{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-gap:10px;
+}
+
+.square {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+    background-color: white; /* Initial color */
+  }
+  
+  .square:hover {
+    background-color: lightgray; /* Hover effect */
+  }
+  
+  .square.clicked {
+    background-color: lightgreen; /* Color after click */
+  }

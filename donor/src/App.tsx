@@ -1,14 +1,12 @@
 import React from 'react'
+import Square from './Square'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
 const App = () => (
   <div className="container">
-    <div>Name: donor</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
+   <>tick tack toh grid:<Square/></>
   </div>
 )
 const rootElement = document.getElementById('app')
