@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import "./squaredesign.css";
 
-function Square(props) {
-  const [cross, setcross] = useState("x");
-  const [zero1, setzero1] = useState("o");
+function Square() {
+  const [board, setBoard] = useState(Array(9).fill(null)); 
 
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    setClicked(!clicked);
+  const handleClick = (index) => {
+    if (board[index]) { 
+      return; 
+    }
+    const newBoard = [...board];// important part!!
+    newBoard[index] = '0'; // Assuming 'X' plays first
+    setBoard(newBoard);
   };
-  const myarray = new Array(9);
-  myarray.fill("-");
+
   return (
     <div className="tictac">
-      {myarray.map((val) => (
-        <div>
-          <button
-            className={`square ${clicked ? "clicked" : ""}`}
-            onClick={handleClick}
-          >
-            click me
-          </button>
-        </div>
+      {board.map((value, index) => (
+        <button 
+          key={index} 
+          className={`square ${value === 'X'||"O"} ? 'clicked' : ''}`} 
+          onClick={() => handleClick(index)}
+        >
+          {value}
+        </button>
       ))}
     </div>
   );
