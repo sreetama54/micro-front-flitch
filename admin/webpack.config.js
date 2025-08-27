@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localho<input type="text" value={nameWitAge} onChange={()=>{setnameWithAge()}} />st:3001/",
+    publicPath: "http://localhost:3001/",
   },
 
   resolve: {
