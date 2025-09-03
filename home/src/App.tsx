@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 //import {BrowserRouter,Routes,Route}from 'react-router-dom'
 import './index.css'
+import  Navigation  from './Navigation'
 //import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 const App = () => {
    //apoloprop=
@@ -11,6 +12,7 @@ const App = () => {
     <div>Framework: react</div>
     <div>Language: TypeScript</div>
     <div>CSS: Empty CSS</div>
+    <div><Navigation/></div>
     <div></div>
   </div>)
 }

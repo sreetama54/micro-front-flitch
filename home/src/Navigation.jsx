@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './navigation.css'
+//import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-export const Navigation = () => {
+export default Navigation = () => {
 
    return(
-    <>hi im Navigation</>
+    <div className="mainclass">hi im Navigation</div>
    ) 
 }
 
